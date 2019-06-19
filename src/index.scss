@@ -1,0 +1,103 @@
+@import "variables.scss";
+
+body {
+  div#root {
+    font-family: monospace, "Courier New", Courier;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: $color-gris;
+
+    .contenedor {
+      border: 10px solid $color-gris;
+      display: flex;
+      padding: 10px;
+      text-align: center;
+      font-size: 2em;
+      color: $color-blanco;
+      box-sizing: border-box;
+      background-color: $color-azuloscuro;
+      list-style-type: none;
+    }
+
+    @media all {
+      .contenedor {
+        flex-wrap: wrap;
+      }
+      .contenedor > .link {
+        flex: 1 1 50%;
+      }
+    }
+
+    @media all and (max-width: 400px) {
+      .contenedor > .link {
+        flex: 1 1 100%;
+      }
+    }
+
+    .contenedor > .link {
+      padding: 10px;
+      text-align: center;
+      font-size: 2em;
+      color: $color-blanco;
+      box-sizing: border-box;
+      background-color: $color-azuloscuro;
+      list-style-type: none;
+    }
+
+    .link:hover {
+      background-color: $color-gris;
+    }
+
+    html,
+    body {
+      background-color: $color-gris;
+      margin: 10px;
+    }
+
+    .form {
+      padding-left: 30px;
+      text-align: center;
+      font-size: 1em;
+      width: 100%;
+    }
+
+    .hist {
+      padding-left: 30px;
+      text-align: left;
+      font-size: 1em;
+      width: 100%;
+    }
+
+    input[type="text"] {
+      margin: 0;
+      height: 35px;
+      width: 20%;
+      color: $color-gris;
+      background-color: $color-azulclaro;
+      text-align: center;
+      font-size: 0.5em;
+    }
+
+    .app {
+      padding: 10px;
+      background-color: $color-gris;
+    }
+
+    .button {
+      font-family: monospace, "Courier New", Courier;
+      font-weight: bold;
+      background-color: $color-blanco;
+      border: none;
+      color: $color-gris;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 0.5em;
+    }
+    .button:hover {
+      color: $color-blanco;
+      background-color: $color-azulclaro;
+    }
+  }
+}
