@@ -6,32 +6,30 @@ import ReactDOM from 'react-dom';
 import 'index.scss';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 // eslint-disable-next-line prettier/prettier
-import Formulario from "./formulario.js";
+import Contacto from "./contacto.js";
 // eslint-disable-next-line prettier/prettier
-import History from "./historial.js";
+import Peliculas from "./historial.js";
 
-const historial = [];
+const peliculas = [];
 
 const App = () => (
   <div className="app">
     <Router>
-      <nav className="contenedor">
-        <Link className="link" to="/form">
-          Formulario
-        </Link>
-        <br />
-        <br />
-        <br />
-        <Link className="link" to="/history">
-          History
-        </Link>
-        <br />
-        <br />
-        <br />
-      </nav>
-      <div className="contenedor">
-        <Route path="/form" render={() => <Formulario />} />
-        <Route path="/history" render={() => <History />} />
+      <Link className="menuTitulos" to="/contacto">
+        Contacto
+      </Link>
+      <br />
+      <br />
+      <br />
+      <Link className="menuTitulos" to="/peliculas">
+        Peliculas
+      </Link>
+      <br />
+      <br />
+      <br />
+      <div className="bloques">
+        <Route path="/contacto" render={() => <Contacto />} />
+        <Route path="/peliculas" render={() => <Peliculas />} />
       </div>
     </Router>
   </div>
@@ -39,4 +37,4 @@ const App = () => (
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-export default historial;
+export default peliculas;

@@ -1,21 +1,32 @@
 @import "variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
+html {
+  height: 100%;
+  background-color: $color-rojo;
+}
 body {
+  margin: 0px;
+
   div#root {
-    font-family: monospace, "Courier New", Courier;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: $color-gris;
+    font-family: "Poppins", sans-serif;
+    //text-transform: uppercase;
+    background-color: $color-rojo;
+
+    .logoCabecera {
+      width: "60%";
+      text-align: center;
+    }
 
     .contenedor {
-      border: 10px solid $color-gris;
+      //border: 10px solid $color-rojo;
       display: flex;
-      padding: 10px;
+      // padding: 10px;
       text-align: center;
-      font-size: 2em;
+      font-size: 1em;
       color: $color-blanco;
       box-sizing: border-box;
-      background-color: $color-azuloscuro;
+      background-color: $color-rojo;
       list-style-type: none;
     }
 
@@ -35,23 +46,17 @@ body {
     }
 
     .contenedor > .link {
-      padding: 10px;
+      //padding: 10px;
       text-align: center;
       font-size: 2em;
       color: $color-blanco;
-      box-sizing: border-box;
-      background-color: $color-azuloscuro;
+      //box-sizing: border-box;
+      background-color: $color-rojo;
       list-style-type: none;
     }
 
     .link:hover {
       background-color: $color-gris;
-    }
-
-    html,
-    body {
-      background-color: $color-gris;
-      margin: 10px;
     }
 
     .form {
@@ -79,8 +84,8 @@ body {
     }
 
     .app {
-      padding: 10px;
-      background-color: $color-gris;
+      //padding: 80px;
+      background-color: $color-rojo;
     }
 
     .button {

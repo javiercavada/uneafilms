@@ -14,36 +14,20 @@ class History extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    // console.log("This is my initializer")
-
-    // const movies = [
-    //   {id: 0, poster_src: "https://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
-    //    title: "Avengers: Infinity War", overview: "As the Avengers and their allies have continued to protect the world from threats too large"},
-    //   {id: 1, poster_src: "https://image.tmdb.org/t/p/w185/cezWGskPY5x7GaglTTRN4Fugfb8.jpg",
-    //    title: "	The Avengers", overview: "This is my second overview"},
-    // ]
-
-    // var movieRows = []
-    // movies.forEach((movie) => {
-    //   console.log(movie.title)
-    //   const movieRow = <MovieRow movie={movie} />
-    //   movieRows.push(movieRow)
-    // })
-
-    // this.state = {rows: movieRows}
-
-    this.performSearch('ant man');
+    this.performSearch('batman');
   }
 
+  /*
   performSearch = async searchTerm => {
     console.log('Perform search using moviedb');
     // npm
-    const response = await axios.get('localhost:8080/peliculas', {
-      params: searchTerm
-    });
+    const response = await axios.get(`localhost:8080/history/${searchTerm}`);
     console.log(response);
-    /*
-    const urlString = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.PELICULAS_API}&query=${searchTerm}`;
+*/
+
+  performSearch(searchTerm) {
+    console.log('Perform search using moviedb');
+    const urlString = `https://api.themoviedb.org/3/search/movie?api_key=2c934ad33805b2c2e7c6355cd9a821d5&query=${searchTerm}`;
     $.ajax({
       url: urlString,
       success: searchResults => {
@@ -67,8 +51,7 @@ class History extends React.Component {
         console.error('Failed to fetch data');
       }
     });
-    */
-  };
+  }
 
   searchChangeHandler(event) {
     console.log(event.target.value);
@@ -84,12 +67,9 @@ class History extends React.Component {
           <tbody>
             <tr>
               <td>
-                <img alt="app icon" width="50" src="green_app_icon.svg" />
+                <img width="50%" src="UneaFilmsLOGO.png" />
               </td>
               <td width="8" />
-              <td>
-                <h1>MoviesDB Search</h1>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -104,7 +84,7 @@ class History extends React.Component {
             paddingLeft: 16
           }}
           onChange={this.searchChangeHandler.bind(this)}
-          placeholder="Enter search term"
+          placeholder="Buscar película..."
         />
 
         {this.state.rows}
