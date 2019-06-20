@@ -3,30 +3,120 @@
 
 html {
   height: 100%;
-  background-color: $color-rojo;
+  background-color: $color-grisfondo;
 }
 body {
   margin: 0px;
 
   div#root {
     font-family: "Poppins", sans-serif;
-    //text-transform: uppercase;
-    background-color: $color-rojo;
+    background-color: $color-grisfondo;
 
-    .logoCabecera {
-      width: "60%";
+    .botonReview {
+      color: $color-blanco;
+      font-size: 0.9em;
+      margin-bottom: 80px;
+      display: inline-block;
+      padding: 0.35em 1.2em;
+      border: 0.1em solid $color-blanco;
+      border-radius: 0.12em;
+      box-sizing: border-box;
+      text-decoration: none;
+      background-color: $color-grisfondo;
       text-align: center;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $color-grisfondo;
+        background-color: $color-blanco;
+      }
     }
 
-    .contenedor {
-      //border: 10px solid $color-rojo;
+    .titulosPeliculas {
+      font-size: 2em;
+    }
+
+    .textosPeliculas {
+      font-size: 0.8em;
+      text-align: justify;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .buscador {
+      width: 40%;
+      padding: 12px 24px;
+      margin-bottom: 80px;
+      background-color: transparent;
+      transition: transform 250ms ease-in-out;
+      font-size: 14px;
+      line-height: 18px;
+      color: $color-blanco;
+      background-color: transparent;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      background-position: 95% center;
+      border-radius: 50px;
+      border: 2px solid $color-blanco;
+      transition: all 250ms ease-in-out;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+
+      &::placeholder {
+        color: color($color-blanco a(0.8));
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      &:hover,
+      &:focus {
+        padding: 12px 0;
+        outline: 0;
+        border: 2px solid transparent;
+        border-bottom: 2px solid $color-blanco;
+        border-radius: 0;
+        background-position: 100% center;
+      }
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30%;
+    }
+
+    .navegador {
       display: flex;
-      // padding: 10px;
       text-align: center;
       font-size: 1em;
       color: $color-blanco;
       box-sizing: border-box;
-      background-color: $color-rojo;
+      background-color: $color-grisfondo;
+      list-style-type: none;
+    }
+
+    .tablapeliculas {
+      margin: auto;
+      width: 50%;
+      padding: 140px;
+      text-align: center;
+    }
+
+    .poster {
+      width: 150px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .contenedor {
+      display: flex;
+      text-align: center;
+      font-size: 1.5em;
+      color: $color-blanco;
+      box-sizing: border-box;
+      background-color: $color-grisfondo;
       list-style-type: none;
     }
 
@@ -46,12 +136,12 @@ body {
     }
 
     .contenedor > .link {
-      //padding: 10px;
+      margin-top: 10px;
+      text-decoration: none;
       text-align: center;
       font-size: 2em;
       color: $color-blanco;
-      //box-sizing: border-box;
-      background-color: $color-rojo;
+      background-color: $color-grisfondo;
       list-style-type: none;
     }
 
@@ -84,8 +174,7 @@ body {
     }
 
     .app {
-      //padding: 80px;
-      background-color: $color-rojo;
+      background-color: $color-grisfondo;
     }
 
     .button {

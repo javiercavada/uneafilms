@@ -10,19 +10,24 @@ class FilaPeliculas extends React.Component {
 
   render() {
     return (
-      <table key={this.props.movie.id}>
+      <table className="tablapeliculas" key={this.props.movie.id}>
         <tbody>
           <tr>
             <td>
-              <img alt="poster" width="120" src={this.props.movie.poster_src} />
+              <img
+                className="poster"
+                alt="poster"
+                src={this.props.movie.poster_src}
+              />
             </td>
             <td>
-              <h3>{this.props.movie.title}</h3>
-              <p>{this.props.movie.overview}</p>
+              <h3 className="titulosPeliculas">{this.props.movie.title}</h3>
+              <p className="textosPeliculas">{this.props.movie.overview}</p>
               <input
+                className="botonReview"
                 type="button"
                 onClick={this.viewMovie.bind(this)}
-                value="View"
+                value="Más info"
               />
             </td>
           </tr>

@@ -19,6 +19,10 @@ const server = new WebpackDevServer(compiler, {
 
 const app = express();
 
+server.listen(8080, 'localhost', () => {
+  console.log('Iniciando servidor en http://localhost:8080');
+});
+
 /** ***********************************************************************************************\
 * *
 * A continuación tenemos comentado el código que habíamos intentado implementar para obtener *
@@ -59,7 +63,3 @@ app.get('/history/:searchTerm', (req, res) => {
     .catch(err => console.log(err));
 });
 */
-
-server.listen(8080, 'localhost', () => {
-  console.log('Iniciando servidor en http://localhost:8080');
-});
