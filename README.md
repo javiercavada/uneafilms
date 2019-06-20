@@ -1,6 +1,6 @@
 **UneaFilms_Grupo7**
 
-_Resumen_
+**_Resumen_**
 
 Esta aplicacion web está implementada siguiendo una estructura cliente - servidor y empaquetada con Webpack.
 
@@ -18,7 +18,7 @@ El cliente implementa estilos usando CSS-en-JS y además incluye funcionalidades
 
 La aplicacion hace uso de @babel para transpilar el codigo de ES6 A ES5 para que cualquier navegador pueda entenderlo.
 
-_Estructura_
+**_Estructura_**
 
 En nuestra aplicación podemos encontrar la siguiente estructura de carpetas:
 
@@ -50,7 +50,7 @@ index.scss
 variables.scss
 UneaFilmsLOGO.png
 
-_Intrucciones de despliegue_
+**_Intrucciones de despliegue_**
 
 --npm install--
 
